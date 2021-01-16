@@ -35,7 +35,13 @@ Example (bash):
 deno completions bash > /usr/local/etc/bash_completion.d/deno.bash
 source /usr/local/etc/bash_completion.d/deno.bash
 ```
-
+Example [(windows ubuntu wsl)](https://github.com/denoland/deno/issues/5777#issuecomment-726268305)
+```shell
+mkdir -p ~/.completions
+deno completions bash >~/.completions/deno.bash
+echo "[[ -d ~/.completions && -n $(ls -A ~/.completions) ]] && . ~/.completions/*" >>~/.bashrc
+source ~/.completions/*
+```
 Example (zsh without framework):
 
 ```shell
